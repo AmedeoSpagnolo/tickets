@@ -10,31 +10,23 @@
 <body>
 
   <form id="transaction" action="">
-    <select name="sender" form="sender">
-      <option value="Alice">Alice</option>
-      <option value="Bob">Bob</option>
-      <option value="Charlie">Charlie</option>
-      <option value="Dan">Dan</option>
-    </select>
-    Get a Ticket from:
-    <select name="receiver" form="receiver">
-      <option value="AWE">AWE</option>
-      <option value="Alice">Alice</option>
-      <option value="Bob">Bob</option>
-      <option value="Charlie">Charlie</option>
-      <option value="Dan">Dan</option>
-    </select>
+    transfer ticket from:
+    <select name="senders" form="senders"></select>
+    to:
+    <select name="receivers" form="receivers"></select>
     <input type="submit" value="transfer">
   </form>
 
   <!-- lib -->
   <script type="text/javascript" src="bower_components/crypto-js/crypto-js.js"></script>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 
   <!-- blockchain -->
   <script type="text/javascript" src="block.js"></script>
   <script type="text/javascript" src="blockchain.js"></script>
 
   <!-- js -->
+  <script type="text/javascript" src="users.js"></script>
   <script type="text/javascript" src="main.js"></script>
 
 </body>

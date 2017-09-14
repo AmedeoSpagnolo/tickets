@@ -1,19 +1,66 @@
 let ledger = new Blockchain()
 
-var tickets = ["ticket_1", "ticket_2", "ticket_3", "ticket_4", "ticket_5", "ticket_6", "ticket_7", "ticket_8", "ticket_9", "ticket_10", "ticket_11", "ticket_12", "ticket_13", "ticket_14", "ticket_15", "ticket_16", "ticket_17", "ticket_18", "ticket_19", "ticket_20"]
-
-var users = ["Alice", "Bob", "Charlie", "Dan"]
-
-function addNewBlock(sender, receiver){
-  console.log(sender, receiver);
-    // var data = ledger.getLatestBlock().data
-    //
-    //
-    // var newIndex = ledger.getLatestIndex() + 1
-    // var newTime = new Date().getTime()
-    // ledger.addBlock(new Block(newIndex, newTime, data))
+function checkIfValid(data, sender, receiver){
+  // sender has no ticket
+  if (!data[sender] || data[sender] < 1) {
+    alert(sender + " has no tickets to transfer")
+    return false
+  }
+  // sender = receivers
+  if (sender == receiver){
+    alert("sender == receiver")
+    return false
+  }
+  // ticket not refundable
+  if (receiver == "AWE"){
+    alert("ticket not refundable")
+    return false
+  }
+  // max 6 tickets per person
+  if (data[receiver] >= 6){
+    alert("max 6 tickets per person")
+    return false
+  }
+  return true
 }
 
-// init AWE tickets
-addNewBlock({"AWE": tickets})
-console.log(ledger.chain)
+function addNewBlock(sender, receiver){
+  var data = ledger.getLatestBlock().data
+  if(checkIfValid(data, sender, receiver)){
+    data[sender] -= 1
+    data[receiver] ? data[receiver] += 1 : data[receiver] = 1
+    var newIndex = ledger.getLatestIndex() + 1
+    var newTime = new Date().getTime()
+    ledger.addBlock(new Block(newIndex, newTime, data))
+    console.log(ledger.chain[ledger.chain.length-1].data)
+  } else {
+    console.log("invalid transaction");
+  }
+}
+
+function initLedger(){
+  $.getJSON("ledger.json", function(json) {
+    ledger.addBlock(new Block(1, new Date().getTime(), json))
+    console.log(json);
+  })
+}
+
+$(document).ready(function() {
+
+  // init
+  initLedger()
+
+  // load users in ui
+  users.forEach(function(user){
+    $("#transaction [name='senders']").append("<option value='"+user+"'>"+user+"</option>")
+    $("#transaction [name='receivers']").append("<option value='"+user+"'>"+user+"</option>")
+  })
+
+  // listening form
+  $('#transaction').on("submit", function(event){
+    event.preventDefault();
+    var sender = $(this).children("[name='senders']").val()
+    var receiver = $(this).children("[name='receivers']").val()
+    addNewBlock(sender, receiver)
+  })
+});

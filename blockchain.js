@@ -16,7 +16,6 @@ class Blockchain {
   }
 
   dataIsValid(data){
-    console.log("data: " + data);
     return true
   }
 
