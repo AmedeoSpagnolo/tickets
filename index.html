@@ -9,15 +9,22 @@
 </head>
 <body>
 
-  <form action="">
-    <select name="users" form="users">
+  <form id="transaction" action="">
+    <select name="sender" form="sender">
       <option value="Alice">Alice</option>
       <option value="Bob">Bob</option>
       <option value="Charlie">Charlie</option>
       <option value="Dan">Dan</option>
     </select>
-
-    <input type="submit" value="Get a Ticket">
+    Get a Ticket from:
+    <select name="receiver" form="receiver">
+      <option value="AWE">AWE</option>
+      <option value="Alice">Alice</option>
+      <option value="Bob">Bob</option>
+      <option value="Charlie">Charlie</option>
+      <option value="Dan">Dan</option>
+    </select>
+    <input type="submit" value="transfer">
   </form>
 
   <!-- lib -->

@@ -15,7 +15,7 @@ class Blockchain {
     return this.chain[this.chain.length - 1].index
   }
 
-  isValid(data){
+  dataIsValid(data){
     console.log("data: " + data);
     return true
   }
@@ -23,7 +23,7 @@ class Blockchain {
   addBlock(newBlock){
     newBlock.previousHash = this.getLatestBlock().hash
     newBlock.hash = newBlock.calculateHash()
-    if(this.isValid(newBlock)){
+    if(this.dataIsValid(newBlock)){
       this.chain.push(newBlock)
     }
   }

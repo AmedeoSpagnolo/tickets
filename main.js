@@ -4,12 +4,15 @@ var tickets = ["ticket_1", "ticket_2", "ticket_3", "ticket_4", "ticket_5", "tick
 
 var users = ["Alice", "Bob", "Charlie", "Dan"]
 
-function addNewBlock(data){
-    var newIndex = ledger.getLatestIndex() + 1
-    var newTime = new Date().getTime()
-    ledger.addBlock(new Block(newIndex, newTime, data))
+function addNewBlock(sender, receiver){
+  console.log(sender, receiver);
+    // var data = ledger.getLatestBlock().data
+    //
+    //
+    // var newIndex = ledger.getLatestIndex() + 1
+    // var newTime = new Date().getTime()
+    // ledger.addBlock(new Block(newIndex, newTime, data))
 }
-
 
 // init AWE tickets
 addNewBlock({"AWE": tickets})
