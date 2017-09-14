@@ -24,6 +24,15 @@ function checkIfValid(data, sender, receiver){
   return true
 }
 
+function printStatus(status){
+  $("#status").empty()
+  for (var key in status) {
+    if(status[key] > 0){
+      $("#status").append("<p>" + key + ": " + status[key] + "</p>")
+    }
+  }
+}
+
 function addNewBlock(sender, receiver){
   var data = ledger.getLatestBlock().data
   if(checkIfValid(data, sender, receiver)){
@@ -33,6 +42,7 @@ function addNewBlock(sender, receiver){
     var newTime = new Date().getTime()
     ledger.addBlock(new Block(newIndex, newTime, data))
     console.log(ledger.chain[ledger.chain.length-1].data)
+    printStatus(ledger.chain[ledger.chain.length-1].data)
   } else {
     console.log("invalid transaction");
   }
