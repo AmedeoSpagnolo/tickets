@@ -1,0 +1,20 @@
+{
+  "name": "blockchain",
+  "main": "blockchain.js",
+  "authors": [
+    "Amedeo Spagnolo <amedeo.spagnolo@gmail.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "crypto-js": "^3.1.9"
+  }
+}
