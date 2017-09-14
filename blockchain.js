@@ -19,11 +19,22 @@ class Blockchain {
     return true
   }
 
+  updateBackend(block){
+    $.ajax({
+      url: 'http://localhost:3000/blockchain',
+      type: 'POST',
+      data: block,
+      success: function(){},
+      error: function(){}
+    })
+  }
+
   addBlock(newBlock){
     newBlock.previousHash = this.getLatestBlock().hash
     newBlock.hash = newBlock.calculateHash()
     if(this.dataIsValid(newBlock)){
       this.chain.push(newBlock)
+      this.updateBackend(newBlock)
     }
   }
 }

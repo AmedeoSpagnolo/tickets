@@ -1,3 +1,50 @@
 {
-  "AWE": 100
+  "Blockchain": [
+    {
+      "index": "1",
+      "timestamp": "1505404422273",
+      "data[AWE]": "100",
+      "previousHash": "bb2a70beac8ea79f9c26397572ea88114044ee38009f2a31309dd4b142a2d33d",
+      "hash": "9638e1cff5ce12926c54b799e464548e9bebb9261d145d7b8b32c6a98de6991d",
+      "id": 1
+    },
+    {
+      "index": "2",
+      "timestamp": "1505404443569",
+      "data[AWE]": "99",
+      "data[Alice]": "1",
+      "previousHash": "9638e1cff5ce12926c54b799e464548e9bebb9261d145d7b8b32c6a98de6991d",
+      "hash": "343ae6c3e94ac3ba1b66212f7d431348a969ecaadbac2ba4a1996006c088037a",
+      "id": 2
+    },
+    {
+      "index": "3",
+      "timestamp": "1505404453483",
+      "data[AWE]": "98",
+      "data[Alice]": "1",
+      "data[Bob]": "1",
+      "previousHash": "343ae6c3e94ac3ba1b66212f7d431348a969ecaadbac2ba4a1996006c088037a",
+      "hash": "13a20922ac08da500473ded398a5c3b3ee19567954c4183d5ec9df22082ec927",
+      "id": 3
+    },
+    {
+      "index": "4",
+      "timestamp": "1505404529914",
+      "data[AWE]": "97",
+      "data[Alice]": "1",
+      "data[Bob]": "1",
+      "data[Charlie]": "1",
+      "previousHash": "13a20922ac08da500473ded398a5c3b3ee19567954c4183d5ec9df22082ec927",
+      "hash": "5f5d926cc3df761f1f7ccc99a77b40f2bb6f0f0e80ec5648ea43e711fc83194c",
+      "id": 4
+    },
+    {
+      "index": "1",
+      "timestamp": "1505404530100",
+      "data[AWE]": "100",
+      "previousHash": "bb2a70beac8ea79f9c26397572ea88114044ee38009f2a31309dd4b142a2d33d",
+      "hash": "d831594c8c529132ae6c5e10166378c3511527aa374e13bb02db0efde0c9020d",
+      "id": 5
+    }
+  ]
 }

@@ -49,7 +49,7 @@ function addNewBlock(sender, receiver){
 }
 
 function initLedger(){
-  $.getJSON("ledger.json", function(json) {
+  $.getJSON("data.json", function(json) {
     ledger.addBlock(new Block(1, new Date().getTime(), json))
     console.log(json);
   })
