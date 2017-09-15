@@ -6,4 +6,4 @@
     json-server --watch --port 3000 backend/ledger.json
 
 ## start frontend
-    browser-sync start --server --files *
+    browser-sync start --server --files '*'
