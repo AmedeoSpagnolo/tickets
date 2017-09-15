@@ -1,29 +1,3 @@
 {
-  "Blockchain": [
-    {
-      "index": "1",
-      "timestamp": "1505441080784",
-      "data[AWE]": "100",
-      "previousHash": "bb2a70beac8ea79f9c26397572ea88114044ee38009f2a31309dd4b142a2d33d",
-      "hash": "eff195c644c288deb293710dc135ee4d1ff7624a5e92959831c30885fc0ca8e2",
-      "id": 1
-    },
-    {
-      "index": "2",
-      "timestamp": "1505441096608",
-      "data[AWE]": "99",
-      "data[Alice]": "1",
-      "previousHash": "eff195c644c288deb293710dc135ee4d1ff7624a5e92959831c30885fc0ca8e2",
-      "hash": "0747e6b0add9498e579735d4255dd3e8d25361077e77f26502b7238fdca67df2",
-      "id": 2
-    },
-    {
-      "index": "1",
-      "timestamp": "1505441127945",
-      "data[AWE]": "100",
-      "previousHash": "bb2a70beac8ea79f9c26397572ea88114044ee38009f2a31309dd4b142a2d33d",
-      "hash": "b6aa50d95f1ca402cd6e48aa9e5dfb2979a23b8c879972fc668783585ca8e59a",
-      "id": 3
-    }
-  ]
+  "Blockchain": []
 }
